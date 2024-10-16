@@ -52,6 +52,7 @@ $header-height-mobile: 44px; // Reduced header height for mobile screens
             width: 100%; // Make the links full-width
             display: block; // Block-level elements for easy tapping
             background-color: transparent;
+            background-image: none;
             color: $color-black;
             transition: background-color $transition, color $transition;
 
