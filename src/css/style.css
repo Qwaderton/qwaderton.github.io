@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Urbanist";
-  src: url(/src/fnt/Urbanist-VariableFont_wght.ttf);
+  src: url(../fnt/Urbanist-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: "Raleway";
-  src: url(/src/fnt/Raleway-VariableFont_wght.ttf);
+  src: url(../fnt/Raleway-VariableFont_wght.ttf);
 }
 aside {
   width: 250px;
