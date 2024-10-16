@@ -34,7 +34,7 @@ $header-height-mobile: 44px; // Reduced header height for mobile screens
         top: 0;
         left: -100%; // Initially off-screen
         width: 100vw; // Full screen width for mobile
-        height: 100vh; // Full screen height for mobile
+        height: 100dvh; // Full screen height for mobile
         display: flex;
         flex-direction: column;
         justify-content: center; // Center items vertically
@@ -141,7 +141,7 @@ $header-height-mobile: 44px; // Reduced header height for mobile screens
         top: 0;
         left: 100%; // Initially hidden off-screen
         width: 100vw; // Sidebar width for mobile
-        height: 100vh; // Full screen height for mobile
+        height: 100dvh; // Full screen height for mobile
         background-color: $color-white;
         transition: left 0.3s ease; // Smooth slide-in transition
         nav {

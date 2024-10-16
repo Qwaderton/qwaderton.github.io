@@ -558,7 +558,7 @@ code.bubble {
     top: 0;
     left: -100%;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -632,7 +632,7 @@ code.bubble {
     top: 0;
     left: 100%;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background-color: #efefef;
     transition: left 0.3s ease;
   }
