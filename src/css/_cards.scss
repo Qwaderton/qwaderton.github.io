@@ -17,6 +17,16 @@
   
     .card-img {
       margin-bottom: 14px;
+      // For images inside cards
+      & img {
+        max-width: 100%; // Ensures images don't overflow the card
+        height: auto; // Maintain aspect ratio for images within cards
+        max-height: $card-image-max-height; // Height limit
+        object-fit: cover; // Ensures the image fills the area and gets cropped if necessary
+      }
+      & img.contain {
+        object-fit: contain; // Keeps the whole image visible within the card
+      }
     }
     .card-title {
       font-size: 1.5rem;
@@ -31,17 +41,6 @@
     }
     * {
       margin: 0;
-    }
-  
-    // For images inside cards
-    & img {
-      max-width: 100%; // Ensures images don't overflow the card
-      height: auto; // Maintain aspect ratio for images within cards
-      max-height: 300px; // Height limit
-      object-fit: cover; // Ensures the image fills the area and gets cropped if necessary
-    }
-    & img.contain {
-      object-fit: contain; // Keeps the whole image visible within the card
     }
   }
   

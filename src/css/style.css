@@ -87,6 +87,17 @@ aside nav ul li a.active::before {
 .card .card-img {
   margin-bottom: 14px;
 }
+.card .card-img img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .card-img img.contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .card .card-title {
   font-size: 1.5rem;
   margin-bottom: 2px;
@@ -100,17 +111,6 @@ aside nav ul li a.active::before {
 }
 .card * {
   margin: 0;
-}
-.card img {
-  max-width: 100%;
-  height: auto;
-  max-height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.card img.contain {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .card.bubble {
@@ -301,6 +301,9 @@ input[type=checkbox]:checked {
   border-color: #1f1f1f;
 }
 
+/* -----------------
+   Gallery Styles
+----------------- */
 *,
 *::before,
 *::after {

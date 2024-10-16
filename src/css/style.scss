@@ -37,11 +37,13 @@ $container-padding: 24px;
 $section-gap: 32px;
 $header-height: 88px;
 $card-translate: -6px; // Y-axis translate for card hover effect
+$card-image-max-height: 300px; // Max height for images inside a card
 $sidebar-width: 250px; // Fixed width for the sidebar
 
 @import 'aside';
 @import 'cards';
 @import 'input';
+@import 'galle';
 
 // ------------------------
 // Global Styles
