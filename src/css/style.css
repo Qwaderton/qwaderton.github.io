@@ -235,6 +235,7 @@ input[type=text]:not(:placeholder-shown), input[type=email]:not(:placeholder-sho
 input[type=text].bubble, input[type=email].bubble, input[type=password].bubble {
   box-shadow: 0 -4px 12px rgba(255, 255, 255, 0.4), inset 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77), transform 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  border: 0;
 }
 input[type=text].bubble:hover, input[type=email].bubble:hover, input[type=password].bubble:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);

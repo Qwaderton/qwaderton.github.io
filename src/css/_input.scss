@@ -139,7 +139,8 @@ button {
     &.bubble {
       box-shadow: 0 -4px 12px rgba(255,255,255, .4), inset 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: box-shadow $transition, transform $transition;
-  
+      border: 0;
+      
       &:hover {
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
       }
