@@ -9,12 +9,13 @@
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); // Regular shadow for default cards
     transition: box-shadow $transition, transform $transition;
-  
+    margin-bottom: 20px;
+
     &:hover {
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // Hover effect with subtle lift
       transform: translateY($card-translate);
     }
-  
+
     .card-img {
       margin-bottom: 14px;
       // For images inside cards
@@ -43,20 +44,19 @@
       margin: 0;
     }
   }
-  
+
   // Bubble-specific card styles
   .card.bubble {
     box-shadow: 0 -4px 12px rgba(255, 255, 255, 0.4), inset 0 4px 12px rgba(0, 0, 0, 0.1); // Inset shadow for bubble effect
     transition: box-shadow $transition, transform $transition; // Smooth transition for hover and active states
-  
+
     &:hover {
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); // Lifted shadow on hover
       transform: translateY($card-translate); // Slight translation upwards
     }
-  
+
     &:active {
       transform: translateY(1px); // Depressed effect when the card is clicked
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Smaller shadow when pressed
     }
   }
-  

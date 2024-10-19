@@ -6,7 +6,9 @@ $container-padding-mobile: 12px; // Reduced padding for mobile screens
 $header-height-mobile: 44px; // Reduced header height for mobile screens
 
 @media (max-width: 768px) {
-
+    * {
+        scroll-padding-top: $header-height-mobile;
+    }
     // Header Adjustments for Mobile
     header {
         height: $header-height-mobile; // Reduce header height for mobile
@@ -18,7 +20,9 @@ $header-height-mobile: 44px; // Reduced header height for mobile screens
         padding: 0;
         & .logo {
             & a img {
-                height: $header-height-mobile;
+                height: $header-height-mobile - $container-padding-mobile; // Ensure logo image fills header height
+                width: $header-height-mobile - $container-padding-mobile; // Ensure logo image fills header height
+                margin: math.div($container-padding-mobile, 2);
             }
             height: $header-height-mobile;
         }
@@ -79,7 +83,7 @@ $header-height-mobile: 44px; // Reduced header height for mobile screens
         text-align: center; // Center footer content for mobile
     }
 
-    
+
 
     // Mobile Burger Icon (for opening nav)
     #burger-menu {
@@ -90,7 +94,7 @@ $header-height-mobile: 44px; // Reduced header height for mobile screens
         justify-content: space-between; // Evenly space the lines
         cursor: pointer; // Show pointer on hover
         z-index: 999;
-      
+
         // Style for each line in the burger menu
         span {
           display: block;
@@ -99,33 +103,33 @@ $header-height-mobile: 44px; // Reduced header height for mobile screens
           background-color: $color-black; // Default line color
           border-radius: 2px; // Rounded edges for a smooth look
           transition: transform $transition, background-color $transition, opacity $transition; // Smooth transitions for animation
-      
+
         //   &:nth-child(1) {
         //     // First line
         //   }
-      
+
         //   &:nth-child(2) {
         //     // Middle line
         //   }
-      
+
         //   &:nth-child(3) {
         //     // Last line
         //   }
         }
-      
+
         &.open span:nth-child(1) {
           transform: translateY(7px) rotate(45deg); // Top line rotates into X position
         }
-      
+
         &.open span:nth-child(2) {
           opacity: 0; // Middle line fades out (disappear)
         }
-      
+
         &.open span:nth-child(3) {
           transform: translateY(-7px) rotate(-45deg); // Bottom line rotates into X position
         }
       }
-      
+
     #docu-menu {
         width: 24px;
         height: 24px;

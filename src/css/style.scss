@@ -1,6 +1,8 @@
 // ------------------------
 // Variables
 // ------------------------
+@use "sass:math";
+
 // Define fonts used in the project
 @font-face {
   font-family: "Urbanist";
@@ -12,6 +14,7 @@
 }
 // When fonts cannot be imported locally
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 // Font families used throughout the site
 $primary-font: "Raleway", sans-serif;
@@ -56,6 +59,7 @@ $sidebar-width: 250px; // Fixed width for the sidebar
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth; // Smooth scrolling for internal links
+  scroll-padding-top: $header-height;
 }
 
 // Body styles
@@ -85,9 +89,11 @@ a {
 // Removing default list styling
 ul,
 li {
-  list-style: none;
+  // list-style: none;
   padding: 0;
-  margin: 0;
+  margin-left: 17px;
+  font-size: 1rem;
+  color: $color-gray-dark;
 }
 
 // Container for centering content with max-width
@@ -163,8 +169,10 @@ header {
   }
 
   .logo a img {
-    height: $header-height; // Ensure logo image fills header height
+    height: $header-height - $container-padding; // Ensure logo image fills header height
+    width: $header-height - $container-padding; // Ensure logo image fills header height
     border-radius: 0; // Don't round logo
+    margin: math.div($container-padding, 2);
   }
 }
 
@@ -266,6 +274,11 @@ footer {
     margin-bottom: 0;
     color: $color-gray-light;
   }
+  .logo img {
+    height: calc($header-height / 2);
+    object-fit: contain;
+    margin-bottom: 2px;
+  }
 }
 
 // ------------------------
@@ -274,8 +287,8 @@ footer {
 // Layout wrapper using flexbox for full-height layout
 .layout {
   display: flex;
-  flex-grow: 1; 
-  min-height: 100vh; 
+  flex-grow: 1;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -284,14 +297,14 @@ footer {
 // ------------------------
 // Main content section with spacing and minimum height
 main {
-  flex-grow: 1;  
+  flex-grow: 1;
   padding: $container-padding;
   margin-top: $header-height;
   display: flex;
   flex-direction: column;
   gap: $section-gap;
-  min-height: calc(100vh - $header-height); 
-  
+  min-height: calc(100vh - $header-height);
+
   background-color: $color-gray-light;
   border-left: 1px solid $color-gray-light;
 }
@@ -321,7 +334,7 @@ code {
 
 // Additional class for adjusting layout when sidebar is present
 .asided {
-  margin-left: $sidebar-width; 
+  margin-left: $sidebar-width;
 }
 
 @import 'mobile'; // Prioritise mobile styles

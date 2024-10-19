@@ -79,6 +79,7 @@ aside nav ul li a.active::before {
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77), transform 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
+  margin-bottom: 20px;
 }
 .card:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -312,6 +313,7 @@ input[type=checkbox]:checked {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -328,7 +330,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: inherit;
   transition: color 0.19s cubic-bezier(0.7, 0.26, 0.6, 0.77);
 }
@@ -338,9 +340,10 @@ a:hover {
 
 ul,
 li {
-  list-style: none;
   padding: 0;
-  margin: 0;
+  margin-left: 17px;
+  font-size: 1rem;
+  color: #454545;
 }
 
 .container {
@@ -407,8 +410,10 @@ header nav a:hover {
   background-size: 100% 1px;
 }
 header .logo a img {
-  height: 88px;
+  height: 64px;
+  width: 64px;
   border-radius: 0;
+  margin: 12px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -491,6 +496,12 @@ footer p {
   margin-bottom: 0;
   color: #e8e8e8;
 }
+footer .logo img {
+  height: 44px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 2px;
+}
 
 .layout {
   display: flex;
@@ -537,6 +548,9 @@ code.bubble {
 }
 
 @media (max-width: 768px) {
+  * {
+    scroll-padding-top: 44px;
+  }
   header {
     height: 44px;
     padding: 12px;
@@ -550,7 +564,9 @@ code.bubble {
     height: 44px;
   }
   header .logo a img {
-    height: 44px;
+    height: 32px;
+    width: 32px;
+    margin: 6px;
   }
   header .container {
     padding: 0;
