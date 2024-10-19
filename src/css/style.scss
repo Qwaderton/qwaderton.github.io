@@ -83,7 +83,19 @@ a {
   transition: color $transition; // Smooth color transition on hover
   &:hover {
     color: $color-gray-dark;
+    background-size: 100% 2px; // Full underline on hover
   }
+    font-family: $secondary-font;
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+    background-image: linear-gradient($color-black, $color-black); // Gradient for hover underline
+    background-size: 0% 1px; // Initially hidden underline
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    transition: background-size $transition; // Smooth expand of underline on hover
+    background-size: 100% 1px; // Full underline
 }
 
 // Removing default list styling
